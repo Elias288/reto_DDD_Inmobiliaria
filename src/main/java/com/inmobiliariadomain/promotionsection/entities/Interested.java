@@ -31,4 +31,16 @@ public class Interested extends Entity<InterestedID> {
     public Contact getContact() {
         return contact;
     }
+
+    public void updateName(Name name) {
+        this.name = Objects.requireNonNull(name);
+    }
+
+    public void updateQueryType(QueryType queryType) {
+        this.queryType = Objects.requireNonNull(queryType);
+    }
+
+    public void updateContact(Contact contact) {
+        this.contact = Objects.requireNonNull(contact);
+    }
 }

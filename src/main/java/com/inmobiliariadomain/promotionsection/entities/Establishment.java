@@ -17,4 +17,8 @@ public class Establishment extends Entity<EstablishmentID> {
     public Address getAddress() {
         return address;
     }
+
+    public void updateAddress(Address address) {
+        this.address = Objects.requireNonNull(address);
+    }
 }
