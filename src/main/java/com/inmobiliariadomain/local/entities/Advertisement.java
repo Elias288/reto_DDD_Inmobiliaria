@@ -12,10 +12,10 @@ public class Advertisement extends Entity<AdvertisementID> {
     private ExpirationDate expirationDate;
     private IsDone isDone;
 
-    public Advertisement(AdvertisementID entityId, ExpirationDate expirationDate, IsDone isDone) {
+    public Advertisement(AdvertisementID entityId, ExpirationDate expirationDate) {
         super(entityId);
         this.expirationDate = expirationDate;
-        this.isDone = isDone;
+        this.isDone = new IsDone(false);
     }
 
     public ExpirationDate expirationDate() {
@@ -30,7 +30,7 @@ public class Advertisement extends Entity<AdvertisementID> {
         return isDone;
     }
 
-    public void ToggleIsDone(IsDone isDone) {
+    public void toggleIsDone(IsDone isDone) {
         this.isDone = Objects.requireNonNull(isDone);
     }
 }
