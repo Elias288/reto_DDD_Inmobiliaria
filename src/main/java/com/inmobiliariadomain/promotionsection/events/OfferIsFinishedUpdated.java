@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.value.IsFinished;
-import com.inmobiliariadomain.promotionsection.value.OfferID;
+import com.inmobiliariadomain.promotionsection.values.IsFinished;
+import com.inmobiliariadomain.promotionsection.values.OfferID;
 
 public class OfferIsFinishedUpdated extends DomainEvent {
     private final OfferID offerID;

@@ -1,18 +1,18 @@
-package com.inmobiliariadomain.promotionsection.value;
+package com.inmobiliariadomain.promotionsection.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class IsFinished implements ValueObject<Boolean> {
-    private final Boolean value;
+public class QueryType implements ValueObject<String> {
+    private final String value;
 
-    public IsFinished(boolean value) {
-        this.value = value;
+    public QueryType(String value) {
+        this.value = Objects.requireNonNull(value);
     }
 
     @Override
-    public Boolean value() {
+    public String value() {
         return this.value;
     }
 
@@ -20,8 +20,8 @@ public class IsFinished implements ValueObject<Boolean> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        IsFinished that = (IsFinished) o;
-        return Objects.equals(value, that.value);
+        QueryType queryType = (QueryType) o;
+        return Objects.equals(value, queryType.value);
     }
 
     @Override

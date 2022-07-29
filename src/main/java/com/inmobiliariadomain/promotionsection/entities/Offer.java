@@ -1,9 +1,9 @@
 package com.inmobiliariadomain.promotionsection.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import com.inmobiliariadomain.promotionsection.value.IsFinished;
-import com.inmobiliariadomain.promotionsection.value.OfferDate;
-import com.inmobiliariadomain.promotionsection.value.OfferID;
+import com.inmobiliariadomain.promotionsection.values.IsFinished;
+import com.inmobiliariadomain.promotionsection.values.OfferDate;
+import com.inmobiliariadomain.promotionsection.values.OfferID;
 
 import java.util.Objects;
 

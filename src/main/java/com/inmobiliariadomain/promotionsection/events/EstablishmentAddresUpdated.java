@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.value.Address;
-import com.inmobiliariadomain.promotionsection.value.EstablishmentID;
+import com.inmobiliariadomain.promotionsection.values.Address;
+import com.inmobiliariadomain.promotionsection.values.EstablishmentID;
 
 public class EstablishmentAddresUpdated extends DomainEvent {
     private final EstablishmentID establishmentID;

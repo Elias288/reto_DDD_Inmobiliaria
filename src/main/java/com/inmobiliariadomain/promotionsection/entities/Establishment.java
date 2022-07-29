@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import com.inmobiliariadomain.promotionsection.value.Address;
-import com.inmobiliariadomain.promotionsection.value.EstablishmentID;
+import com.inmobiliariadomain.promotionsection.values.Address;
+import com.inmobiliariadomain.promotionsection.values.EstablishmentID;
 
 import java.util.Objects;
 

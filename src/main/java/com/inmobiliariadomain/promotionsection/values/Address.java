@@ -1,13 +1,13 @@
-package com.inmobiliariadomain.promotionsection.value;
+package com.inmobiliariadomain.promotionsection.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class QueryType implements ValueObject<String> {
+public class Address implements ValueObject<String> {
     private final String value;
 
-    public QueryType(String value) {
+    public Address(String value) {
         this.value = Objects.requireNonNull(value);
     }
 
@@ -20,8 +20,8 @@ public class QueryType implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        QueryType queryType = (QueryType) o;
-        return Objects.equals(value, queryType.value);
+        Address address = (Address) o;
+        return Objects.equals(value, address.value);
     }
 
     @Override

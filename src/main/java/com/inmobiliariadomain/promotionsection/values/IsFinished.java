@@ -1,18 +1,18 @@
-package com.inmobiliariadomain.promotionsection.value;
+package com.inmobiliariadomain.promotionsection.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Address implements ValueObject<String> {
-    private final String value;
+public class IsFinished implements ValueObject<Boolean> {
+    private final Boolean value;
 
-    public Address(String value) {
-        this.value = Objects.requireNonNull(value);
+    public IsFinished(boolean value) {
+        this.value = value;
     }
 
     @Override
-    public String value() {
+    public Boolean value() {
         return this.value;
     }
 
@@ -20,8 +20,8 @@ public class Address implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Address address = (Address) o;
-        return Objects.equals(value, address.value);
+        IsFinished that = (IsFinished) o;
+        return Objects.equals(value, that.value);
     }
 
     @Override

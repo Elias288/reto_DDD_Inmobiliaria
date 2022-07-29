@@ -1,7 +1,7 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.value.InterestedID;
+import com.inmobiliariadomain.promotionsection.values.InterestedID;
 
 public class InterestedRemoved extends DomainEvent {
     private final InterestedID interestedID;

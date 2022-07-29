@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.inmobiliariadomain.promotionsection.value.Address;
-import com.inmobiliariadomain.promotionsection.value.PairingID;
+import com.inmobiliariadomain.promotionsection.values.Address;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 
 public class UpdateEstablishmentAddress extends Command {
     private final PairingID pairingID;

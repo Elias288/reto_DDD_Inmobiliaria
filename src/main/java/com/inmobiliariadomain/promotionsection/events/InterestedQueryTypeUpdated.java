@@ -1,20 +1,21 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.value.QueryType;
+import com.inmobiliariadomain.promotionsection.values.InterestedID;
+import com.inmobiliariadomain.promotionsection.values.QueryType;
 
 public class InterestedQueryTypeUpdated extends DomainEvent {
-    private final InterestedAdded interestedAdded;
+    private final InterestedID interestedID;
     private final QueryType queryType;
 
-    public InterestedQueryTypeUpdated(InterestedAdded interestedAdded, QueryType queryType) {
+    public InterestedQueryTypeUpdated(InterestedID interestedID, QueryType queryType) {
         super("com.inmobiliariadomain.promotionsection.interestedquerytypeupdated");
-        this.interestedAdded = interestedAdded;
+        this.interestedID = interestedID;
         this.queryType = queryType;
     }
 
-    public InterestedAdded getInterestedAdded() {
-        return interestedAdded;
+    public InterestedID getInterestedID() {
+        return interestedID;
     }
 
     public QueryType getQueryType() {

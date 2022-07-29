@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.inmobiliariadomain.promotionsection.value.PairingID;
-import com.inmobiliariadomain.promotionsection.value.QueryType;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
+import com.inmobiliariadomain.promotionsection.values.QueryType;
 
 public class UpdateInterestedQueryType extends Command {
     private final PairingID pairingID;

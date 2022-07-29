@@ -2,8 +2,8 @@ package com.inmobiliariadomain.promotionsection.commands;
 
 import co.com.sofka.domain.generic.Command;
 import com.inmobiliariadomain.local.values.Contact;
-import com.inmobiliariadomain.promotionsection.value.Name;
-import com.inmobiliariadomain.promotionsection.value.QueryType;
+import com.inmobiliariadomain.promotionsection.values.Name;
+import com.inmobiliariadomain.promotionsection.values.QueryType;
 
 public class AddInterested extends Command {
     private final QueryType queryType;

@@ -1,8 +1,8 @@
 package com.inmobiliariadomain.promotionsection.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.inmobiliariadomain.promotionsection.value.IsFinished;
-import com.inmobiliariadomain.promotionsection.value.PairingID;
+import com.inmobiliariadomain.promotionsection.values.IsFinished;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 
 public class UpdateOfferIsFinished extends Command {
     private final PairingID pairingID;

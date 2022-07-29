@@ -1,10 +1,10 @@
 package com.inmobiliariadomain.promotionsection.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import com.inmobiliariadomain.promotionsection.value.Contact;
-import com.inmobiliariadomain.promotionsection.value.InterestedID;
-import com.inmobiliariadomain.promotionsection.value.Name;
-import com.inmobiliariadomain.promotionsection.value.QueryType;
+import com.inmobiliariadomain.promotionsection.values.Contact;
+import com.inmobiliariadomain.promotionsection.values.InterestedID;
+import com.inmobiliariadomain.promotionsection.values.Name;
+import com.inmobiliariadomain.promotionsection.values.QueryType;
 
 import java.util.Objects;
 

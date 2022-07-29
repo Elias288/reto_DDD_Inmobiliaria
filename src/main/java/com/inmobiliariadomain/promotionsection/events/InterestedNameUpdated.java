@@ -1,14 +1,14 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.value.InterestedID;
-import com.inmobiliariadomain.promotionsection.value.Name;
+import com.inmobiliariadomain.promotionsection.values.InterestedID;
+import com.inmobiliariadomain.promotionsection.values.Name;
 
-public class InteresetedNameUpdated extends DomainEvent {
+public class InterestedNameUpdated extends DomainEvent {
     private final InterestedID interestedID;
     private final Name name;
 
-    public InteresetedNameUpdated(InterestedID interestedID, Name name) {
+    public InterestedNameUpdated(InterestedID interestedID, Name name) {
         super("com.inmobiliariadomain.promotionsection.interestednameupdated");
         this.interestedID = interestedID;
         this.name = name;

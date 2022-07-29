@@ -1,4 +1,4 @@
-package com.inmobiliariadomain.promotionsection.value;
+package com.inmobiliariadomain.promotionsection.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
