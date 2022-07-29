@@ -1,18 +1,20 @@
 package com.inmobiliariadomain.proposal.commands;
 
 import co.com.sofka.domain.generic.Command;
+import com.inmobiliariadomain.proposal.values.Commission;
 import com.inmobiliariadomain.proposal.values.ContractID;
 import com.inmobiliariadomain.proposal.values.EmployeeID;
 import com.inmobiliariadomain.proposal.values.Name;
 
-public class UpdateEmployeeName extends Command {
+public class UpdateEmployeeCommision extends Command {
     private final ContractID contractID;
     private final EmployeeID employeeID;
-    private final Name name;
+    private final Commission commission;
 
-    public UpdateEmployeeName(ContractID contractID, Name name, EmployeeID employeeID) {
+
+    public UpdateEmployeeCommision(ContractID contractID, Commission commission, EmployeeID employeeID) {
         this.contractID = contractID;
-        this.name = name;
+        this.commission = commission;
         this.employeeID = employeeID;
     }
 
@@ -24,7 +26,7 @@ public class UpdateEmployeeName extends Command {
         return employeeID;
     }
 
-    public Name getName() {
-        return name;
+    public Commission getCommission() {
+        return commission;
     }
 }
