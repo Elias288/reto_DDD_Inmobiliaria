@@ -13,10 +13,10 @@ public class AddActivity extends Command {
     private final IsDone isDone;
 
 
-    public AddActivity(ContractID contractID, ActivityType activityType, IsDone isDone) {
+    public AddActivity(ContractID contractID, ActivityType activityType) {
         this.contractID = contractID;
         this.activityType = activityType;
-        this.isDone = isDone;
+        this.isDone = new IsDone(false);
     }
 
     public ContractID getContractID() {

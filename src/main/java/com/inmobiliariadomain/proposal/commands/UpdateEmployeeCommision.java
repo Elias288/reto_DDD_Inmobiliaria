@@ -4,7 +4,6 @@ import co.com.sofka.domain.generic.Command;
 import com.inmobiliariadomain.proposal.values.Commission;
 import com.inmobiliariadomain.proposal.values.ContractID;
 import com.inmobiliariadomain.proposal.values.EmployeeID;
-import com.inmobiliariadomain.proposal.values.Name;
 
 public class UpdateEmployeeCommision extends Command {
     private final ContractID contractID;

@@ -2,7 +2,6 @@ package com.inmobiliariadomain.proposal.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.inmobiliariadomain.local.values.PropertyID;
-import com.inmobiliariadomain.proposal.values.Name;
 
 public class ContractCreated extends DomainEvent {
     private final PropertyID propertyID;

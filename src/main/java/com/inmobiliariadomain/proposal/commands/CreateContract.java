@@ -1,23 +1,23 @@
 package com.inmobiliariadomain.proposal.commands;
 
 import co.com.sofka.domain.generic.Command;
+import com.inmobiliariadomain.local.values.PropertyID;
 import com.inmobiliariadomain.proposal.values.ContractID;
-import com.inmobiliariadomain.proposal.values.Name;
 
 public class CreateContract extends Command {
     private final ContractID contractID;
-    private final Name name;
+    private final PropertyID propertyID;
 
-    public CreateContract(ContractID contractID, Name name) {
+    public CreateContract(ContractID contractID, PropertyID propertyID) {
         this.contractID = contractID;
-        this.name = name;
+        this.propertyID = propertyID;
     }
 
     public ContractID getContractID() {
         return contractID;
     }
 
-    public Name getName() {
-        return name;
+    public PropertyID getPropertyID() {
+        return propertyID;
     }
 }

@@ -8,8 +8,8 @@ import java.util.Objects;
 public class Commission implements ValueObject<BigDecimal> {
     private final BigDecimal value;
 
-    public Commission(BigDecimal value){
-        this.value = Objects.requireNonNull(value);
+    public Commission(Integer value){
+        this.value = Objects.requireNonNull(new BigDecimal(value));
     }
 
     @Override
