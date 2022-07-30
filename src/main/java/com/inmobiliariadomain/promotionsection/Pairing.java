@@ -2,6 +2,7 @@ package com.inmobiliariadomain.promotionsection;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import com.inmobiliariadomain.local.values.IsDone;
 import com.inmobiliariadomain.promotionsection.values.*;
 import com.inmobiliariadomain.promotionsection.entities.*;
 import com.inmobiliariadomain.promotionsection.events.*;
@@ -78,8 +79,8 @@ public class Pairing extends AggregateEvent<PairingID> {
         appendChange(new InterestedContactUpdated(interestedID, contact)).apply();
     }
 
-    public void removeAdvertisement(InterestedID advertisementID){
-        appendChange(new InterestedRemoved(advertisementID)).apply();
+    public void removeInterested(InterestedID interestedID){
+        appendChange(new InterestedRemoved(interestedID)).apply();
     }
 
 
