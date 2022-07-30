@@ -4,7 +4,6 @@ import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import com.inmobiliariadomain.promotionsection.Pairing;
-import com.inmobiliariadomain.promotionsection.commands.UpdateInterestedQueryType;
 import com.inmobiliariadomain.promotionsection.commands.UpdateOfferDate;
 
 public class UpdatedOfferDateUseCase extends UseCase<RequestCommand<UpdateOfferDate>, ResponseEvents> {

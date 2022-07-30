@@ -49,6 +49,9 @@ public class Management extends AggregateEvent<ManagementID> {
     public void updatePropertyPrice(PropertyID propertyID, Price price){
         appendChange(new PropertyPriceUpdated(propertyID, price)).apply();
     }
+    public void updatePropertyType(PropertyID propertyID, PropertyType propertyType){
+        appendChange(new PropertyTypeUpdated(propertyID, propertyType)).apply();
+    }
 
     public void removeProperty(PropertyID propertyID){
         appendChange(new PropertyRemoved(propertyID)).apply();

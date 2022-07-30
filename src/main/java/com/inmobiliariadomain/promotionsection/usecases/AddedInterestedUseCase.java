@@ -5,8 +5,6 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import com.inmobiliariadomain.promotionsection.Pairing;
 import com.inmobiliariadomain.promotionsection.commands.AddInterested;
-import com.inmobiliariadomain.proposal.proposal.Contract;
-import com.inmobiliariadomain.proposal.proposal.commands.AddEmployee;
 
 public class AddedInterestedUseCase extends UseCase<RequestCommand<AddInterested>, ResponseEvents> {
 

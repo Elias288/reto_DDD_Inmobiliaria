@@ -4,7 +4,6 @@ import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import com.inmobiliariadomain.promotionsection.Pairing;
-import com.inmobiliariadomain.promotionsection.commands.AddOffer;
 import com.inmobiliariadomain.promotionsection.commands.UpdateEstablishmentAddress;
 
 public class UpdatedEstablishmentAddresUseCase extends UseCase<RequestCommand<UpdateEstablishmentAddress>, ResponseEvents> {
