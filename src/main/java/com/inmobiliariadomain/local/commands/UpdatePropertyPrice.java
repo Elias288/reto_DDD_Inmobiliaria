@@ -10,7 +10,7 @@ public class UpdatePropertyPrice extends Command {
     private final PropertyID propertyID;
     private final Price price;
 
-    public UpdatePropertyPrice(PropertyID propertyID, ManagementID managementID, Price price) {
+    public UpdatePropertyPrice(ManagementID managementID, PropertyID propertyID, Price price) {
         this.managementID = managementID;
         this.price = price;
         this.propertyID = propertyID;

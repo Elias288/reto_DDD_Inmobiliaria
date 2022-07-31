@@ -10,7 +10,7 @@ public class UpdatePropertyAddress extends Command {
     private final PropertyID propertyID;
     private final Address address;
 
-    public UpdatePropertyAddress(PropertyID propertyID, ManagementID managementID, Address address) {
+    public UpdatePropertyAddress(ManagementID managementID, PropertyID propertyID, Address address) {
         this.managementID = managementID;
         this.address = address;
         this.propertyID = propertyID;

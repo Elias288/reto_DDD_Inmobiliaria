@@ -15,9 +15,11 @@ public class Management extends AggregateEvent<ManagementID> {
     protected Owner owner;
     protected Set<Advertisement> advertisementSet;
 
-    public Management(ManagementID entityId, Owner owner) {
+    protected InitialDate initialDate;
+
+    public Management(ManagementID entityId, InitialDate initialDate) {
         super(entityId);
-        appendChange(new ManagementCreated(owner)).apply();
+        appendChange(new ManagementCreated(initialDate)).apply();
     }
 
     public Management(ManagementID entityId) {

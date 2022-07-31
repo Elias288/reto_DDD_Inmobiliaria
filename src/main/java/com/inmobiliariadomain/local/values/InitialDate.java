@@ -2,18 +2,18 @@ package com.inmobiliariadomain.local.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Objects;
 
-public class Price implements ValueObject<BigDecimal> {
-    private final BigDecimal value;
+public class InitialDate implements ValueObject<Date> {
+    private final Date value;
 
-    public Price(Integer value) {
-        this.value = Objects.requireNonNull(new BigDecimal(value));
+    public InitialDate(Date value) {
+        this.value = Objects.requireNonNull(value);
     }
 
     @Override
-    public BigDecimal value() {
+    public Date value() {
         return this.value;
     }
 
@@ -21,8 +21,8 @@ public class Price implements ValueObject<BigDecimal> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Price price = (Price) o;
-        return Objects.equals(value, price.value);
+        InitialDate that = (InitialDate) o;
+        return Objects.equals(value, that.value);
     }
 
     @Override

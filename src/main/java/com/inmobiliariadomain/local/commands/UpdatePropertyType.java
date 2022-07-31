@@ -10,7 +10,7 @@ public class UpdatePropertyType extends Command {
     private final PropertyID propertyID;
     private final PropertyType propertyType;
 
-    public UpdatePropertyType(PropertyID propertyID, ManagementID managementID, PropertyType propertyType) {
+    public UpdatePropertyType(ManagementID managementID, PropertyID propertyID, PropertyType propertyType) {
         this.managementID = managementID;
         this.propertyType = propertyType;
         this.propertyID = propertyID;

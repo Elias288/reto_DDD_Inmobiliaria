@@ -6,7 +6,7 @@ import co.com.sofka.business.support.ResponseEvents;
 import com.inmobiliariadomain.local.Management;
 import com.inmobiliariadomain.local.commands.AddProperty;
 
-public class AddedOPropertyUseCase extends UseCase<RequestCommand<AddProperty>, ResponseEvents> {
+public class AddedPropertyUseCase extends UseCase<RequestCommand<AddProperty>, ResponseEvents> {
 
     @Override
     public void executeUseCase(RequestCommand<AddProperty> addActivityCommand) {

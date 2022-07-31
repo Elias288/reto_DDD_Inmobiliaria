@@ -8,8 +8,8 @@ import java.util.Objects;
 public class Debit implements ValueObject<BigDecimal> {
     private final BigDecimal value;
 
-    public Debit(BigDecimal value) {
-        this.value = Objects.requireNonNull(value);
+    public Debit(Integer value) {
+        this.value = Objects.requireNonNull(new BigDecimal(value));
     }
 
     @Override

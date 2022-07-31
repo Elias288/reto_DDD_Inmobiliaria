@@ -10,7 +10,7 @@ public class UpdatePropertyArea extends Command {
     private final PropertyID propertyID;
     private final Area area;
 
-    public UpdatePropertyArea(PropertyID propertyID, ManagementID managementID, Area area) {
+    public UpdatePropertyArea(ManagementID managementID, PropertyID propertyID, Area area) {
         this.managementID = managementID;
         this.area = area;
         this.propertyID = propertyID;

@@ -8,11 +8,9 @@ import com.inmobiliariadomain.local.values.ManagementID;
 public class AddAdvertisement extends Command {
     private final ManagementID managementID;
     private final ExpirationDate expirationDate;
-    private final IsDone isDone;
 
-    public AddAdvertisement(ManagementID managementID, ExpirationDate expirationDate, IsDone isDone) {
+    public AddAdvertisement(ManagementID managementID, ExpirationDate expirationDate) {
         this.expirationDate = expirationDate;
-        this.isDone = isDone;
         this.managementID = managementID;
     }
 
@@ -23,7 +21,4 @@ public class AddAdvertisement extends Command {
         return expirationDate;
     }
 
-    public IsDone getIsDone() {
-        return isDone;
-    }
 }

@@ -2,17 +2,18 @@ package com.inmobiliariadomain.local.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.inmobiliariadomain.local.entities.Owner;
+import com.inmobiliariadomain.local.values.InitialDate;
 import com.inmobiliariadomain.local.values.ManagementID;
 
 public class ManagementCreated extends DomainEvent {
-    private final Owner owner;
+    private final InitialDate initialDate;
 
-    public ManagementCreated(Owner owner) {
+    public ManagementCreated(InitialDate initialDate) {
         super("com.propertyID.local.managementcreated");
-        this.owner = owner;
+        this.initialDate = initialDate;
     }
 
-    public Owner getOwner() {
-        return owner;
+    public InitialDate getInitialDate() {
+        return initialDate;
     }
 }

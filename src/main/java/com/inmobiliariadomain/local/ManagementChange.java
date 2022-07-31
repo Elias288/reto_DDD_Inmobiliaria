@@ -12,7 +12,7 @@ public class ManagementChange extends EventChange {
     public ManagementChange(Management management){
 
         apply((ManagementCreated event) -> {
-            management.owner = event.getOwner();
+            management.initialDate = event.getInitialDate();
             management.propetySet = new HashSet<>();
             management.advertisementSet = new HashSet<>();
         });
