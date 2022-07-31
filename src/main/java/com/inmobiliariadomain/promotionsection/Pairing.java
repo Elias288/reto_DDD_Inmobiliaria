@@ -2,10 +2,14 @@ package com.inmobiliariadomain.promotionsection;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import com.inmobiliariadomain.local.values.PropertyID;
 import com.inmobiliariadomain.promotionsection.values.*;
 import com.inmobiliariadomain.promotionsection.entities.*;
 import com.inmobiliariadomain.promotionsection.events.*;
+import com.inmobiliariadomain.proposal.events.ContractCreated;
+import com.inmobiliariadomain.proposal.values.ContractID;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -15,13 +19,13 @@ public class Pairing extends AggregateEvent<PairingID> {
     protected Establishment establishment;
     protected Set<Offer> offerSet;
 
-    public Pairing(PairingID pairingID, Establishment owner) {
-        super(pairingID);
-        appendChange(new PairingCreated(owner)).apply();
+    public Pairing(PairingID entityId, Date date) {
+        super(entityId);
+        appendChange(new PairingCreated(date)).apply();
     }
 
-    public Pairing(PairingID pairingID) {
-        super(pairingID);
+    public Pairing(PairingID entityId) {
+        super(entityId);
         subscribe(new PairingChange(this));
     }
 

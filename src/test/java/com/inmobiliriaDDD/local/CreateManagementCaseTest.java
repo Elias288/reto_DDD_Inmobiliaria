@@ -40,7 +40,7 @@ class CreateManagementCaseTest {
                 .getDomainEvents();
 
         //asserts
-        ManagementCreated managementCreated = (ManagementCreated) domainEvents.get(0);;
+        ManagementCreated managementCreated = (ManagementCreated) domainEvents.get(0);
         Assertions.assertEquals("fakeManagementID", managementCreated.aggregateRootId());
     }
 }

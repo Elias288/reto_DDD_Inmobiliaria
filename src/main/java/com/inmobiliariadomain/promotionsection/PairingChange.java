@@ -12,7 +12,6 @@ public class PairingChange extends EventChange {
     public PairingChange(Pairing pairing){
 
         apply((PairingCreated event) -> {
-            pairing.establishment = event.getEstablishment();
             pairing.interestedSet = new HashSet<>();
             pairing.offerSet = new HashSet<>();
         });

@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class QueryType implements ValueObject<String> {
-    private final String value;
+public class QueryType implements ValueObject<QueryTypeEnum> {
+    private final QueryTypeEnum value;
 
-    public QueryType(String value) {
+    public QueryType(QueryTypeEnum value) {
         this.value = Objects.requireNonNull(value);
     }
 
     @Override
-    public String value() {
+    public QueryTypeEnum value() {
         return this.value;
     }
 

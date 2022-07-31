@@ -1,17 +1,18 @@
 package com.inmobiliariadomain.promotionsection.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.inmobiliariadomain.promotionsection.entities.Establishment;
+
+import java.util.Date;
 
 public class PairingCreated extends DomainEvent {
-    private final Establishment establishment;
+    protected Date date;
 
-    public PairingCreated(Establishment establishment) {
+    public PairingCreated(Date date) {
         super("com.propertyID.promotionsection.pairingcreated");
-        this.establishment = establishment;
+        this.date = date;
     }
 
-    public Establishment getEstablishment() {
-        return establishment;
+    public Date getDate() {
+        return date;
     }
 }

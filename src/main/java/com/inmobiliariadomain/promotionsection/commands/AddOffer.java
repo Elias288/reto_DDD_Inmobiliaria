@@ -8,12 +8,10 @@ import com.inmobiliariadomain.promotionsection.values.PairingID;
 public class AddOffer extends Command {
     private final PairingID pairingID;
     private final OfferDate offerDate;
-    private final IsFinished isFinished;
 
-    public AddOffer(PairingID pairingID, OfferDate offerDate, IsFinished isFinished) {
+    public AddOffer(PairingID pairingID, OfferDate offerDate) {
         this.pairingID = pairingID;
         this.offerDate = offerDate;
-        this.isFinished = isFinished;
     }
 
     public PairingID getPairingID() {
@@ -23,7 +21,4 @@ public class AddOffer extends Command {
         return offerDate;
     }
 
-    public IsFinished getIsFinished() {
-        return isFinished;
-    }
 }

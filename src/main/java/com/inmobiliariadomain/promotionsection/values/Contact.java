@@ -13,7 +13,7 @@ public class Contact implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return this.value;
     }
 
     @Override
