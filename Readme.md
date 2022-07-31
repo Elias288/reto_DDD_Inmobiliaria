@@ -17,3 +17,5 @@ Con base al conocimiento adquirido sobre DDD poner en evidencia el conocimiento 
 # Analisis y Modelado de dominio
 
 [Aqui](https://drive.google.com/file/d/1098UFp1l429FxYxX4bRgIxKDwVRmDJwG/view?usp=sharing)
+
+# [Video Explicando y mostrando los test](https://youtu.be/BXHQ32eo4Ss)
