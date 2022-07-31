@@ -8,6 +8,7 @@ import com.inmobiliariadomain.local.commands.RemoveAdvertisement;
 import com.inmobiliariadomain.local.events.*;
 import com.inmobiliariadomain.local.usecases.RemovedAdvertisementUseCase;
 import com.inmobiliariadomain.local.values.*;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -40,7 +41,7 @@ class RemoveAdvertisementCaseTest {
         var command = new RemoveAdvertisement(managementID, advertisementID);
 
         when(repository.getEventsBy("fakeManagementID")).thenReturn(List.of(
-                new ManagementCreated(new InitialDate(new Date())),
+                new ManagementCreated(new InitialDate(new Date()), new PairingID("fakePairingID")),
 
                 new PropertyAdded(PropertyID.of("fakePropertyID"), new Price(14500), new Address("Republica Argentina 2134"), new PropertyType(PropertyTypeEnum.APARTMENT), new Area(60)),
                 new PropertyAdded(PropertyID.of("fakePropertyID2"), new Price(10000), new Address("Leandro Gomez 2454"), new PropertyType(PropertyTypeEnum.APARTMENT), new Area(20)),

@@ -8,6 +8,7 @@ import com.inmobiliariadomain.local.events.ManagementCreated;
 import com.inmobiliariadomain.local.usecases.CreateManagementUseCase;
 import com.inmobiliariadomain.local.values.InitialDate;
 import com.inmobiliariadomain.local.values.ManagementID;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,9 +30,10 @@ class CreateManagementCaseTest {
     public void createManagement(){
         //arrrange
         ManagementID fakeManagementID = ManagementID.of("fakeManagementID");
+        PairingID fakePairingID = PairingID.of("fakePairingID");
         InitialDate fakeInitialDate = new InitialDate(new Date());
 
-        CreateManagement command = new CreateManagement(fakeManagementID, fakeInitialDate);
+        CreateManagement command = new CreateManagement(fakeManagementID, fakeInitialDate, fakePairingID);
 
         //act
         List<DomainEvent> domainEvents = UseCaseHandler.getInstance()

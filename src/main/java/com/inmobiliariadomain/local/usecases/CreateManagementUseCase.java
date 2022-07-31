@@ -12,7 +12,7 @@ public class CreateManagementUseCase extends UseCase<RequestCommand<CreateManage
     public void executeUseCase(RequestCommand<CreateManagement> addActivityCommand) {
         var command = addActivityCommand.getCommand();
 
-        var management = new Management(command.getManagementID(), command.getInitialDate());
+        var management = new Management(command.getManagementID(), command.getInitialDate(), command.getPairing());
 
         emit().onResponse(new ResponseEvents(management.getUncommittedChanges()));
     }

@@ -27,8 +27,8 @@ class CreateContractCaseTest {
     @Test
     public void createContrat(){
         //arrrange
-        ContractID contractID = ContractID.of("ddddd");
-        PropertyID propertyID = PropertyID.of("DDD");
+        ContractID contractID = ContractID.of("fakeContractID");
+        PropertyID propertyID = PropertyID.of("fakePropertyID");
 
         CreateContract command = new CreateContract(contractID, propertyID);
 
@@ -40,7 +40,7 @@ class CreateContractCaseTest {
 
         //asserts
         ContractCreated contractCreated = (ContractCreated) domainEvents.get(0);
-        Assertions.assertEquals("ddddd", contractCreated.aggregateRootId());
-        Assertions.assertEquals("DDD", contractCreated.getPropertyID().value());
+        Assertions.assertEquals("fakeContractID", contractCreated.aggregateRootId());
+        Assertions.assertEquals("fakePropertyID", contractCreated.getPropertyID().value());
     }
 }

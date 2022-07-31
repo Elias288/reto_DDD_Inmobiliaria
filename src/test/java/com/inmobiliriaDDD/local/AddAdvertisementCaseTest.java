@@ -11,6 +11,7 @@ import com.inmobiliariadomain.local.events.PropertyAdded;
 import com.inmobiliariadomain.local.usecases.AddedAdvertisementUseCase;
 import com.inmobiliariadomain.local.usecases.AddedPropertyUseCase;
 import com.inmobiliariadomain.local.values.*;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -62,7 +63,7 @@ class AddAdvertisementCaseTest {
 
     private List<DomainEvent> history(){
         InitialDate initialDate = new InitialDate(new Date());
-        var event = new ManagementCreated(initialDate);
+        var event = new ManagementCreated(initialDate, new PairingID("fakePairingID"));
         event.setAggregateRootId(initialDate.toString());
         return List.of(event);
     }

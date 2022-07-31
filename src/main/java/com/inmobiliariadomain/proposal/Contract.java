@@ -32,6 +32,10 @@ public class Contract extends AggregateEvent<ContractID> {
         return contract;
     }
 
+    public void notifyContractCreated(String value){
+        appendChange(new NotifyContractCreated(value)).apply();
+    }
+
     //events
     //Activity
     public void addActivity(ActivityType activityType){

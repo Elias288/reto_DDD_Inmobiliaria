@@ -5,6 +5,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.inmobiliariadomain.local.entities.*;
 import com.inmobiliariadomain.local.events.*;
 import com.inmobiliariadomain.local.values.*;
+import com.inmobiliariadomain.promotionsection.values.PairingID;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,11 +16,12 @@ public class Management extends AggregateEvent<ManagementID> {
     protected Owner owner;
     protected Set<Advertisement> advertisementSet;
 
+    protected PairingID pairing;
     protected InitialDate initialDate;
 
-    public Management(ManagementID entityId, InitialDate initialDate) {
+    public Management(ManagementID entityId, InitialDate initialDate, PairingID pairingID) {
         super(entityId);
-        appendChange(new ManagementCreated(initialDate)).apply();
+        appendChange(new ManagementCreated(initialDate, pairingID)).apply();
     }
 
     public Management(ManagementID entityId) {
@@ -31,6 +33,10 @@ public class Management extends AggregateEvent<ManagementID> {
         Management management = new Management(managementID);
         domainEvents.forEach(management::applyEvent);
         return management;
+    }
+
+    public void notifyPropertyAdded(String value){
+        appendChange(new NotifyManagementCreated(value)).apply();
     }
 
     //EVENTS

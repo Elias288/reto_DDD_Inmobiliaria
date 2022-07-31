@@ -11,7 +11,7 @@ public class CreateContractUseCase extends UseCase<RequestCommand<CreateContract
     @Override
     public void executeUseCase(RequestCommand<CreateContract> addActivityCommand) {
         var command = addActivityCommand.getCommand();
-        //Contract contract = Contract.from(command.getContractID(), repository().getEventsBy(command.getContractID().value()));
+
         var contract = new Contract(command.getContractID(), command.getPropertyID());
 
         emit().onResponse(new ResponseEvents(contract.getUncommittedChanges()));
